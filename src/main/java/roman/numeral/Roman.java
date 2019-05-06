@@ -1,25 +1,18 @@
 package roman.numeral;
 
-import java.util.Stack;
-
 public class Roman {
 
     public static int toInt(String romanNumeral) {
-        Stack<String> stack = new Stack<>();
 
         String[] letters = romanNumeral.split("");
-
-        for (String letter : letters) {
-            stack.push(letter);
-        }
 
         int result = 0;
 
         int previous = 0;
 
-        while (!stack.isEmpty()) {
+        for (int i = letters.length - 1; i > -1; i--) {
             int next = 0;
-            String letter = stack.pop();
+            String letter = letters[i];
 
             if ("I".equals(letter)) {
                 next = 1;
