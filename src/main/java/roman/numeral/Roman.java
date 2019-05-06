@@ -30,11 +30,12 @@ public class Roman {
                 next = 1000;
             }
 
-            if (next > previous || next == previous) {
-                result += next;
-            } else {
+            if (next < previous) {
                 result -= next;
+            } else {
+                result += next;
             }
+
             previous = next;
 
         }
