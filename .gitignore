@@ -3,7 +3,6 @@ out
 .gradle
 build
 .idea
-gradle
 
 # Compiled class file
 *.class
